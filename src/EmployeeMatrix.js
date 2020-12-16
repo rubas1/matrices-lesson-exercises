@@ -1,11 +1,22 @@
-/* Write your code below */
+matrix = require(Matrix)
 
+class EmployeeMatrix extends matrix{
+    constructor(rows, cols){
+        super(rows, cols)
+    }
 
-
-
-//You can paste the code from the lesson below to test your solution
-
-
+    loadData(salaryData){
+        let matrix = []
+        let num = 1
+        for (let r = 0; r < salaryData.length; r++) {
+            matrix.push([])
+            for (let c = 0; c < salaryData[r].length; c++) {
+                matrix[r].push(salaryData[r][c])
+            }
+        }
+        this.arr = matrix
+    }
+}
 
 
 /* Do not remove the exports below */
